@@ -1,0 +1,146 @@
+{
+  "scope": "Allowlisted partial public export only",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 19,
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 372,
+      "sha256": "59fdda0cbcbce17711aba35c044b93b5670e9a7dbc6fff8ada02b6d35fe2699f"
+    },
+    {
+      "path": "CODE_PROVENANCE.json",
+      "bytes": 736,
+      "sha256": "6e633b1af4fb803f1721a79f5d9a0aa35e1d4fa68253a8557ef099a269fefe8f"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1082,
+      "sha256": "55df5459a63497d055858a142d4bc717894e840223849562b4f3980d9cfae018"
+    },
+    {
+      "path": "PUBLIC_CONTENTS.json",
+      "bytes": 964,
+      "sha256": "79ce910021baf8d17f62bd6a2190ff1b6fd23c958251506e23fd02d8d85313ad"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2985,
+      "sha256": "c3972e4ed3faaa8bf05a1d8b7c7ba6850ba5fecdfecb13c741195c2ea8d97af1"
+    },
+    {
+      "path": "README_中文.md",
+      "bytes": 1781,
+      "sha256": "9fb429ce73e0fafd05e3bd5ba463ee7e69c1eaac7583141d35013b63dbde13b1"
+    },
+    {
+      "path": "data/TERMS.md",
+      "bytes": 1482,
+      "sha256": "e833995e9633adfa09b40a6438ceecbf033332eed98bc5106207af44e25f3e46"
+    },
+    {
+      "path": "data/condition_target_examples_30.jsonl",
+      "bytes": 39777,
+      "sha256": "30d38fa57de36b7dcbd7f388d3f75e1298253bc24bc6196403588f991bf6bab5"
+    },
+    {
+      "path": "data/paper_endpoint_summaries_60.csv",
+      "bytes": 4160,
+      "sha256": "ec038f46d4a2f342464cd69227ddc42d5ca3e01dae38e5e3be8f500ef895d301"
+    },
+    {
+      "path": "data/structures_300.csv",
+      "bytes": 47980,
+      "sha256": "e51c836fbcac610d0aad1f517e02f9b642bca4c5349429a42e6139283c0cbff3"
+    },
+    {
+      "path": "docs/DATA_SCHEMA.md",
+      "bytes": 1263,
+      "sha256": "8164835dbad1837028a63cebafbe792defcb765d4fbf54a925d478ce5051307a"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 583,
+      "sha256": "e93017aaa76d400e074cc3396f387125a6e405f8a1ca6740a401da3f8960df9a"
+    },
+    {
+      "path": "licenses/OMG-GPL-3.0.txt",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "licenses/PI1M-MIT.txt",
+      "bytes": 1069,
+      "sha256": "5d12f0b5cbba9788685f2220145d8bc1d0a6d06174bddd906df3c17077856cbe"
+    },
+    {
+      "path": "licenses/PI1M-README.txt",
+      "bytes": 2143,
+      "sha256": "5c20ef38b5eba4fee8d98c6f570f46e89ba1272cee14aefeef2db1ee245ccdb8"
+    },
+    {
+      "path": "licenses/SMiPoly-BSD-3-Clause.txt",
+      "bytes": 1515,
+      "sha256": "7cef930cc58906413314dda6dbe580f93a83f057419cdc6dd0f5e4e37886d8df"
+    },
+    {
+      "path": "polyweave_public/__init__.py",
+      "bytes": 20,
+      "sha256": "a3f7f6d5937bec359685bd111481c5ae644f3079f53325bd50490b812a9d2177"
+    },
+    {
+      "path": "polyweave_public/_graph.py",
+      "bytes": 5732,
+      "sha256": "cd80bb1161564473d5f4150e0d8e4a69a7ffc067abba0078007609450ef04043"
+    },
+    {
+      "path": "polyweave_public/data.py",
+      "bytes": 607,
+      "sha256": "f9735764910fee251323b492c8f9e7fb37fed4a630c0823d8c87e1405116c298"
+    },
+    {
+      "path": "polyweave_public/evaluator.py",
+      "bytes": 6377,
+      "sha256": "ed33c60ed0286a8ade15bc89f6741b59e763860778901523074387945401615e"
+    },
+    {
+      "path": "polyweave_public/results.py",
+      "bytes": 842,
+      "sha256": "c307dfb1ec894a0600dcd188bc09584ed32bebed03abe0ead9fff2c2fd070f2f"
+    },
+    {
+      "path": "polyweave_public/rules.json",
+      "bytes": 395,
+      "sha256": "b56dd5a00e11876c29ebda5420b7a0f6261fd44c92455be51976e09b62266a5c"
+    },
+    {
+      "path": "requirements-evaluation.txt",
+      "bytes": 16,
+      "sha256": "d72ec093a3f6f4a30b75e16b5705d4dba3015f0197e33087524ebd5840ad22a3"
+    },
+    {
+      "path": "scripts/check_examples.py",
+      "bytes": 1250,
+      "sha256": "2e18b13795b15d642ed7fe17a21c555b0155088f7a9dc2e92644ef27353e31f1"
+    },
+    {
+      "path": "scripts/preview_data.py",
+      "bytes": 614,
+      "sha256": "4b2bc47b13c074b9ede7582e1d9e1d46d34916d6576fa687bc9b2b02eb0f0f59"
+    },
+    {
+      "path": "scripts/summarize_results.py",
+      "bytes": 406,
+      "sha256": "fc56d15cec497c77ada788154623fae93df4214d874a4bcc59aa1f88115579dc"
+    },
+    {
+      "path": "tests/test_public_contract.py",
+      "bytes": 2555,
+      "sha256": "4ef7206342a0978af7d5723888ee492ee13403381e47ed2e7527cb6a46d1d23d"
+    }
+  ],
+  "self_excluded": "PUBLIC_MANIFEST.json"
+}

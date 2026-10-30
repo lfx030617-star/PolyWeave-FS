@@ -1,0 +1,34 @@
+{
+  "name": "PolyWeave-FS",
+  "release": "0.1.0-public",
+  "scope": "selected examples and evaluation tools only",
+  "structure_examples": 300,
+  "primary_source_allocation": {
+    "PI1M": 100,
+    "OMG": 100,
+    "SMiPoly": 100
+  },
+  "condition_target_examples": 30,
+  "condition_allocation": {
+    "PI1M": {
+      "F+B": 5,
+      "F+B+D": 5
+    },
+    "OMG": {
+      "F+B": 5,
+      "F+B+D": 5
+    },
+    "SMiPoly": {
+      "F+B": 5,
+      "F+B+D": 5
+    }
+  },
+  "paper_seed_endpoint_summaries": 60,
+  "complete_dataset_public": false,
+  "training_code_public": false,
+  "preference_cache_public": false,
+  "model_weights_public": false,
+  "raw_generation_records_public": false,
+  "formal_test_conditions_public": false,
+  "sampling": "First 100 distinct retained full-train targets per primary source in frozen file order, then first five available examples per condition type/source from those targets. Nonrandom illustrative selection, not a benchmark."
+}

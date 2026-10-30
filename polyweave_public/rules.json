@@ -1,0 +1,26 @@
+{
+  "expected_rdkit_version": "2026.03.5",
+  "endpoint_roles": "symmetric_degree1_single_bond_ports",
+  "allowed_pilot_atomic_numbers": [
+    1,
+    6,
+    7,
+    8,
+    9,
+    16,
+    17,
+    35
+  ],
+  "pilot_heavy_atom_range": [
+    10,
+    80
+  ],
+  "exclude_pilot_radicals": true,
+  "make_scaffold_protocol": true,
+  "split_seed": 20261015,
+  "split_weights": [
+    80,
+    10,
+    10
+  ]
+}

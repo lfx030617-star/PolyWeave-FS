@@ -1,0 +1,22 @@
+# Allowlist: private materials must never be copied into this repository.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/README_中文.md
+!/LICENSE
+!/PUBLIC_CONTENTS.json
+!/CODE_PROVENANCE.json
+!/PUBLIC_MANIFEST.json
+!/requirements-evaluation.txt
+!/data/
+!/polyweave_public/
+!/scripts/
+!/tests/
+!/docs/
+!/licenses/
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
+**/._*
+**/results/
