@@ -1,0 +1,31 @@
+{
+  "scope": "Model release engineering validation; not a performance benchmark",
+  "archive_bytes": 894848074,
+  "archive_sha256": "974f3aba98a6958c88a941f70edba659b0048b8feeae9cef8b9984dfde086b8e",
+  "all_archive_members_sha256_verified": true,
+  "accepted_full_DPO_seed101_identity_verified": true,
+  "model_fingerprint": "e5c968000b2bbbf3a55dce771877b9fb7c6a52c32f8ec7ef6e51b60d8bf90907",
+  "actual_parameter_count": 222893568,
+  "vocab_size": 32115,
+  "device": "cpu",
+  "runtime_versions": {
+    "torch": "2.5.1",
+    "transformers": "5.15.1",
+    "tokenizers": "0.22.2",
+    "rdkit": "2026.3.5",
+    "numpy": "1.26.4",
+    "safetensors": "0.8.0"
+  },
+  "actual_AutoTokenizer_roundtrip_conditions": 30,
+  "sampler_cache_and_per_candidate_rng_check_passed": true,
+  "complete_cli_conditions": 2,
+  "complete_cli_attempts": 8,
+  "conditions_include_optional_size_bin": true,
+  "generated_records_public": false,
+  "new_training_performed": false,
+  "server_hardware_equivalence_claimed": false,
+  "archive_parts": 7,
+  "multipart_restores_original_archive_sha256": true,
+  "remote_asset_sha256_digests_verified": true,
+  "remote_asset_count": 9
+}

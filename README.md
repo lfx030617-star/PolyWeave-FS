@@ -1,23 +1,20 @@
-# PolyWeave-FS · Public examples
+# PolyWeave-FS · Public examples and final DPO model
 
-**A partial public release of source-attributed polymer examples and structural-evaluation tools.** PolyWeave-FS（链织）links polymer structures to fragment (F) and size (S) constraints.
-
-This repository intentionally publishes only a selected subset. It is **not** the complete dataset, training release or full experimental reproduction package. The remaining research materials are not uploaded to this repository. The final DPO model is separately authorized for publication; its weights are still awaiting export from the author server.
-
-## Available here
+PolyWeave-FS（链织）links polymer repeat units to fragment and size constraints. This partial public release provides selected source-attributed examples, structural-evaluation tools, an inference interface and one final full-data DPO checkpoint (fixed training seed 101).
 
 | Public material | Scope |
 |---|---|
 | Structure examples | 300 unique structures: 100 primary examples each from PI1M, OMG and SMiPoly |
 | Condition–target examples | 30 training-origin records: 5 F+B and 5 F+B+D per source |
-| Paper endpoint summaries | 60 experiment/scale/method/seed rows supporting reported descriptive comparisons |
-| Code | Streaming readers, selected frozen graph/constraint evaluator, example checks, mean/SD summaries and a checkpoint-verified inference interface |
+| Paper endpoint summaries | 60 experiment/scale/method/seed rows for descriptive comparisons |
+| Code | Streaming readers, frozen constraint evaluator, result summaries, verified model downloader and inference interface |
+| Final model | [Full-data DPO seed101](https://github.com/lfx030617-star/PolyWeave-FS/releases/tag/model-dpo-full-seed101-v1.0.0), approximately 895 MB; configuration, adapted tokenizer and notices included |
 
-Only retained training-origin structures are used for the examples; no formal test condition table is released. Examples are selected deterministically from frozen file order, not randomly, and are not a representative performance benchmark. The 30 targets are existing input–target records, not generated outputs.
+The complete dataset, complete training tables, training pipelines, preference/reference caches, other checkpoints, formal test conditions, original generation records and manuscript drafts remain unpublished. See [PUBLIC_CONTENTS.json](PUBLIC_CONTENTS.json). Model weights are Release attachments, outside Git history.
 
 ## Quick start
 
-Python 3.12 is recommended. To inspect data or recompute summary statistics, no additional packages are needed:
+Python 3.12 is recommended. Standard-library tools inspect examples and reproduce summary statistics:
 
 ```sh
 python scripts/preview_data.py --limit 2
@@ -25,25 +22,27 @@ python scripts/summarize_results.py
 python -m unittest discover -s tests -v
 ```
 
-For chemical evaluation, use a compatible RDKit environment:
+Download the final model with the standard-library downloader. It fetches seven pieces, verifies every piece, restores the original ZIP, checks its SHA256 and validates the extracted checkpoint:
 
 ```sh
-python -m pip install -r requirements-evaluation.txt
-python scripts/check_examples.py
+python scripts/download_model.py
 ```
 
-The evaluator follows the frozen RDKit 2026.03.5 graph semantics. It checks parsing, connected structure, two degree-one bare `*` single-bond ports, task-domain elements, fragment SMARTS matching with chirality and optional size bins. The evaluator does not train a model. An additional inference-only interface is provided in `scripts/generate.py`; it requires the final model checkpoint, which is not downloadable yet. Full-reference novelty cannot be reconstructed from 300 examples; no full-library novelty claim is made by the example script.
+Install hardware-appropriate PyTorch and the pinned inference dependencies; preserve an existing accepted manufacturer DCU PyTorch build. Then run:
 
-## Not included
+```sh
+python -m pip install -r requirements-inference.txt
+python scripts/generate.py --model-dir models/PolyWeave-FS-DPO-full-seed101 --example-index 0 --attempts 20 --output results/example_0
+```
 
-Full structures, complete training tables, preference pairs/reference caches, training pipelines, model weights (pending separate authorized release), formal test conditions, raw generation logs, local archives, private source maps and manuscript drafts are not included. Public samples and code cannot reproduce the entire training or all formal raw outputs. See [PUBLIC_CONTENTS.json](PUBLIC_CONTENTS.json) for exact scope.
+For chemical example checks alone, install requirements-evaluation.txt and run scripts/check_examples.py. The frozen evaluator uses RDKit 2026.03.5, two bare `*` ports, fragment SMARTS matching with chirality and optional heavy-atom bins. See [model usage](docs/MODEL_USAGE.md), [model validation](docs/MODEL_VALIDATION.json) and [data schema](docs/DATA_SCHEMA.md).
+
+## Interpretation and scope
+
+The 300 structures and 30 condition–target records are deterministic training-origin illustrations, not a representative performance benchmark or a formal test release. Their targets are existing records. A single released seed is not the paper's five-seed average. Full-reference novelty cannot be reconstructed from the small public examples. Generated candidates are not experimentally validated synthesis routes or material properties.
 
 ## Licensing and attribution
 
-Author-owned public code is MIT licensed. Dataset examples retain source-specific notices and conditions; see [data/TERMS.md](data/TERMS.md) and licenses/. Root MIT does not override upstream data terms. Endpoint summary results use CC BY 4.0. Computational constraint checks do not establish synthesizability or material properties.
+Author-owned public interface code is MIT licensed. The final model archive includes the original PolyTAO Apache-2.0 licence and modification notice. Dataset examples retain their source-specific notices and conditions; see [data/TERMS.md](data/TERMS.md) and licenses/. Root MIT does not override upstream model or data terms. Endpoint summary results use CC BY 4.0.
 
-中文说明：[README_中文.md](README_中文.md). Schema and usage: [docs/DATA_SCHEMA.md](docs/DATA_SCHEMA.md).
-
-## Final DPO model status
-
-The inference interface is available, while the actual checkpoint is awaiting author-server export. See [MODEL_RELEASE.json](MODEL_RELEASE.json) and [docs/MODEL_USAGE.md](docs/MODEL_USAGE.md). Training code and private generation-pool pipelines remain unpublished.
+中文说明：[README_中文.md](README_中文.md).

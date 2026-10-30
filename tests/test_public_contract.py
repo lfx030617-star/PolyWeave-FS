@@ -35,6 +35,9 @@ class PublicContract(unittest.TestCase):
     def test_no_large_binary_payloads(self):
         root=Path(__file__).resolve().parents[1]
         for p in root.rglob('*'):
+            # Downloaded models and local generation outputs are ignored runtime
+            # files, outside the published source/data payload.
+            if p.relative_to(root).parts[0] in {'models','results'}:continue
             if p.is_file() and not any(x.startswith('.') or x=='__pycache__' for x in p.relative_to(root).parts):
                 self.assertLess(p.stat().st_size,200000)
                 self.assertNotIn(p.suffix,['.zip','.gz','.tar','.bin','.pt','.safetensors','.sqlite','.docx'])

@@ -1,0 +1,51 @@
+{
+  "format": "polyweave_multipart_zip_v1",
+  "archive_name": "PolyWeave-FS-DPO-full-seed101.zip",
+  "archive_bytes": 894848074,
+  "archive_sha256": "974f3aba98a6958c88a941f70edba659b0048b8feeae9cef8b9984dfde086b8e",
+  "model_directory": "PolyWeave-FS-DPO-full-seed101",
+  "parts": [
+    {
+      "name": "PolyWeave-FS-DPO-full-seed101.zip.part001",
+      "bytes": 128000000,
+      "sha256": "52c9e5d732156cd56ce9dba72786cbfcf0cfb1bb0724011fc4e2959548d479fa",
+      "url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/download/model-dpo-full-seed101-v1.0.0/PolyWeave-FS-DPO-full-seed101.zip.part001"
+    },
+    {
+      "name": "PolyWeave-FS-DPO-full-seed101.zip.part002",
+      "bytes": 128000000,
+      "sha256": "fa5df4c6dbf4dc283a930c6160333916270f3e41acc6d20ffd710ca7b7126100",
+      "url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/download/model-dpo-full-seed101-v1.0.0/PolyWeave-FS-DPO-full-seed101.zip.part002"
+    },
+    {
+      "name": "PolyWeave-FS-DPO-full-seed101.zip.part003",
+      "bytes": 128000000,
+      "sha256": "4b43d397469ac8afa1a124bdcab7efafa335d796a043a280920bace3f6655b4a",
+      "url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/download/model-dpo-full-seed101-v1.0.0/PolyWeave-FS-DPO-full-seed101.zip.part003"
+    },
+    {
+      "name": "PolyWeave-FS-DPO-full-seed101.zip.part004",
+      "bytes": 128000000,
+      "sha256": "646d1809bdad2f0963745071ca80fc4d6da47a5ba7e1ddb8f9cc93fddcbc323b",
+      "url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/download/model-dpo-full-seed101-v1.0.0/PolyWeave-FS-DPO-full-seed101.zip.part004"
+    },
+    {
+      "name": "PolyWeave-FS-DPO-full-seed101.zip.part005",
+      "bytes": 128000000,
+      "sha256": "763439f0ae95f6378f272110db9ef894f757a01e2dc9cce5de8a3a9e45f6bb10",
+      "url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/download/model-dpo-full-seed101-v1.0.0/PolyWeave-FS-DPO-full-seed101.zip.part005"
+    },
+    {
+      "name": "PolyWeave-FS-DPO-full-seed101.zip.part006",
+      "bytes": 128000000,
+      "sha256": "d2d793eec7e464a44c593444f2b0cd10f07fb976cae95d8db7cc08ec5d0aad42",
+      "url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/download/model-dpo-full-seed101-v1.0.0/PolyWeave-FS-DPO-full-seed101.zip.part006"
+    },
+    {
+      "name": "PolyWeave-FS-DPO-full-seed101.zip.part007",
+      "bytes": 126848074,
+      "sha256": "ea435d75a93edf5b05d78856eb449939a15917af31437ca4a81948f7a672dc16",
+      "url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/download/model-dpo-full-seed101-v1.0.0/PolyWeave-FS-DPO-full-seed101.zip.part007"
+    }
+  ]
+}

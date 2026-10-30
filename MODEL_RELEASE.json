@@ -1,6 +1,6 @@
 {
-  "status": "awaiting_checkpoint_export_from_author_server",
-  "checkpoint_download_available": false,
+  "status": "published",
+  "checkpoint_download_available": true,
   "release_asset_url": null,
   "expected_identity": {
     "arm": "DPO",
@@ -23,5 +23,11 @@
   },
   "training_data_public": false,
   "original_raw_generation_records_public": false,
-  "seed_selection": "fixed first training seed 101, not performance-selected"
+  "seed_selection": "fixed first training seed 101, not performance-selected",
+  "release_page_url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/tag/model-dpo-full-seed101-v1.0.0",
+  "download_manifest_url": "https://github.com/lfx030617-star/PolyWeave-FS/releases/download/model-dpo-full-seed101-v1.0.0/MODEL_DOWNLOAD.json",
+  "distribution": "multipart_zip",
+  "archive_sha256": "974f3aba98a6958c88a941f70edba659b0048b8feeae9cef8b9984dfde086b8e",
+  "archive_bytes": 894848074,
+  "model_loading_and_generation_smoke_passed": true
 }

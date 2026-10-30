@@ -1,5 +1,6 @@
 # Install hardware-appropriate PyTorch first; preserve the manufacturer build on DCU.
 transformers==5.15.1
+numpy==1.26.4
 tokenizers==0.22.2
 rdkit==2026.3.5
 safetensors>=0.4.3

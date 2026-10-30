@@ -1,25 +1,26 @@
-# PolyWeave-FS 链织：部分公开版
+# PolyWeave-FS 链织：部分数据、评价工具与最终DPO模型
 
-这里公开精选样例、部分评价工具和生成接口；最终DPO权重待单独发布。当前不包含完整数据集或完整训练工程。其余资料没有上传到本仓库。
+公开内容包括300个规范结构（PI1M、OMG、SMiPoly各100个主来源样例）、30条训练区条件—目标示例、60条逐种子端点汇总、部分读取与评价代码、生成接口，以及固定种子101的最终全量DPO模型。
 
-公开范围：300个规范结构（PI1M、OMG、SMiPoly各100个主来源样例），30条训练区条件—目标示例，60条论文逐种子端点汇总，以及读取、约束评价和均值/标准差复算代码。
-
-未公开：完整结构库、完整训练表、训练源码与原始生成池流水线、偏好对与概率缓存、权重、正式测试条件、原始生成记录、论文草稿、完整压缩包及本地路径清单。没有用.gitignore把这些内容“藏在公开仓库内”，它们从未进入此仓库提交历史。
-
-样例按冻结文件顺序确定，非随机抽样，不能据此报告总体生成性能；30条答案来自已有训练目标，不是新模型输出。连接点统一为裸`*`。有限图划分不等于严格骨架留出或预训练未见。
+**模型下载：[GitHub Release](https://github.com/lfx030617-star/PolyWeave-FS/releases/tag/model-dpo-full-seed101-v1.0.0)。**模型包约895 MB，以7个分块附件提供。下面的标准库工具会自动下载、逐块校验、合并并解压，得到与服务器原始ZIP完全一致的文件；已下载完整且校验通过的分块可以复用。
 
 ```bash
-python scripts/preview_data.py --limit 2
-python scripts/summarize_results.py
-python -m unittest discover -s tests -v
+python scripts/download_model.py
 ```
 
-需要检查化学规则时，在Python3.12环境安装requirements-evaluation.txt，再运行`python scripts/check_examples.py`。代码不训练模型，不下载完整数据。完整参考库没有公开，样例检查不计算完整库外新颖性。
+准备Python3.12及适配硬件的PyTorch环境，安装requirements-inference.txt后运行生成。已有验收通过的DCU环境保留厂商PyTorch，无需重新安装。
 
-本仓库自有代码采用MIT许可；数据保留各上游条款，详见data/TERMS.md和licenses。PI1M原README注明仅供学术用途，不将数据示例另授无限制商业使用许可。论文端点汇总按CC BY 4.0共享。保留来源标记并引用原PI1M、OMG、SMiPoly论文。
+```bash
+python -m pip install -r requirements-inference.txt
+python scripts/generate.py --model-dir models/PolyWeave-FS-DPO-full-seed101 --example-index 0 --attempts 20 --output results/example_0
+```
 
-论文引用本仓库时，应表述“部分示例数据及评价工具公开”，不要写“全部数据与训练代码已开源”。
+生成结果保存在本地，包括全部尝试、合格去重结构和汇总。连接点统一为裸`*`。详见[使用说明](docs/MODEL_USAGE.md)。
 
-## 最终DPO模型与生成接口
+**继续不公开：**完整结构库、完整训练表、训练源码、原始生成池流水线、偏好对与概率缓存、其他模型、正式测试条件、原始生成记录、论文草稿及完整私有资源包。这些资料未进入公开仓库历史；最终模型权重单独通过Release公开。
 
-用户已授权追加公开固定种子101的最终全量DPO模型和生成接口。接口代码已准备；实际权重仍待从作者服务器导出，当前不能从本仓库下载模型。详见docs/MODEL_USAGE.md与MODEL_RELEASE.json。完整训练数据、训练源码和原始生成记录继续不公开。
+数据示例按冻结文件顺序选择，非随机抽样；30条答案来自已有训练目标，不能据此报告模型总体生成性能。单个种子模型不等于论文五种子平均结果。有限图划分不等于严格骨架留出或预训练未见。完整参考库未公开，公开接口不计算完整库外新颖性。
+
+本仓库自有接口代码采用MIT许可；模型包保留原PolyTAO Apache-2.0许可和修改声明，数据保留各上游条款。PI1M原README注明仅供学术用途，不将其数据示例另授无限制商业许可。端点汇总按CC BY 4.0共享。计算约束检查不代表合成可行性或材料性能已经验证。
+
+论文引用时可说明“部分示例数据、评价与生成接口及一个最终DPO检查点公开”，不能写成“全部数据与训练代码已开源”。

@@ -1,5 +1,5 @@
 {
-  "scope": "Allowlisted partial public export and inference interface only; actual model checkpoint pending export",
+  "scope": "Selected public examples, evaluation/download/inference interfaces and model-release metadata; weights distributed as Release assets",
   "files": [
     {
       "path": ".gitattributes",
@@ -8,8 +8,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 422,
-      "sha256": "8796916d0f8e4bfafe9ef32e222f0bba1b8238bb78426ecb4d82db2e3eaaf85d"
+      "bytes": 444,
+      "sha256": "53e93373084890c44605960f5a7f418499691f81bae4907897e35edbfd169b3e"
     },
     {
       "path": "CODE_PROVENANCE.json",
@@ -22,24 +22,29 @@
       "sha256": "55df5459a63497d055858a142d4bc717894e840223849562b4f3980d9cfae018"
     },
     {
+      "path": "MODEL_DOWNLOAD.json",
+      "bytes": 2627,
+      "sha256": "365579d3f5c6094fe5f54165a34818b14e7a5da6f5903c623bf8b021562c26c4"
+    },
+    {
       "path": "MODEL_RELEASE.json",
-      "bytes": 1296,
-      "sha256": "e40858f0156ea69a85fdd4799f08c73cca9c07d7a6f1f6bbf6310a750a81b752"
+      "bytes": 1725,
+      "sha256": "1080eab1c01be41d338897ea46bfa4c4b5395c344b36b4dd3a985067077e06fc"
     },
     {
       "path": "PUBLIC_CONTENTS.json",
-      "bytes": 1186,
-      "sha256": "65b39d52ea4e9c11a26c2041edba874fb446e3cd50616e5e8bdbf51ee76cd6f4"
+      "bytes": 1252,
+      "sha256": "fafec786b7a91f096c78aa715318302a22c1a72c41e6f23c6425772e5f883fbc"
     },
     {
       "path": "README.md",
-      "bytes": 3598,
-      "sha256": "ed5d5c17651ba964db85536f318daf050203316a6b4428af0e96a82bdadee936"
+      "bytes": 3442,
+      "sha256": "62fa1f2d048af957b17741d2478c5f4f9f57d5ea2447298090816ec107c51510"
     },
     {
       "path": "README_中文.md",
-      "bytes": 2202,
-      "sha256": "bd373270f85a01fe5a49ec43ee5c1f60fcf29e32bcf28c760f8a62dbbc9bd9eb"
+      "bytes": 2406,
+      "sha256": "3ad66fe905140a15889d47cce5525e9565cc444a2502ac3cb702b8863e66f03a"
     },
     {
       "path": "data/TERMS.md",
@@ -68,13 +73,18 @@
     },
     {
       "path": "docs/MODEL_USAGE.md",
-      "bytes": 2547,
-      "sha256": "726d51bff6d9b9022b58f1b4315775ad522a69a1ef84601f3d06929ef0c58faa"
+      "bytes": 3726,
+      "sha256": "e2c5ad65af65ab4b97be3d10194555508a23ed7f3d5e36bf297f6919931e3997"
+    },
+    {
+      "path": "docs/MODEL_VALIDATION.json",
+      "bytes": 1151,
+      "sha256": "591fd7c6dca07fd652b8fd141d2ab0490edb88ae66093b7cc9a0bdc857ff3a87"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 1208,
-      "sha256": "05c3bbdfe15737ccf24775650f8476dda03698f770100431c6b4d476721cf818"
+      "bytes": 1560,
+      "sha256": "10ea8febf05d669070ad733d886f73a94704286a4ea478cb3d10cc95b794b3c7"
     },
     {
       "path": "licenses/OMG-GPL-3.0.txt",
@@ -110,6 +120,11 @@
       "path": "polyweave_public/data.py",
       "bytes": 607,
       "sha256": "f9735764910fee251323b492c8f9e7fb37fed4a630c0823d8c87e1405116c298"
+    },
+    {
+      "path": "polyweave_public/download.py",
+      "bytes": 6482,
+      "sha256": "779694efc623e2b1dbe0a1982bec28df0bb0ecc5391f0c43f63fc72f63456da1"
     },
     {
       "path": "polyweave_public/evaluator.py",
@@ -148,13 +163,18 @@
     },
     {
       "path": "requirements-inference.txt",
-      "bytes": 182,
-      "sha256": "01593a102a2a51c51475a1cdbc2c5a4ac004e88b11b3aaf032190ff526199368"
+      "bytes": 196,
+      "sha256": "368544a43c5a6781e59b3ee03581be95a055580b985d9d81e576d89e5a9252b5"
     },
     {
       "path": "scripts/check_examples.py",
       "bytes": 1250,
       "sha256": "2e18b13795b15d642ed7fe17a21c555b0155088f7a9dc2e92644ef27353e31f1"
+    },
+    {
+      "path": "scripts/download_model.py",
+      "bytes": 170,
+      "sha256": "3babcd6ef6a45209606abe5374a2382d59c9c5d384883305022eb15a47e1f020"
     },
     {
       "path": "scripts/generate.py",
@@ -172,14 +192,19 @@
       "sha256": "fc56d15cec497c77ada788154623fae93df4214d874a4bcc59aa1f88115579dc"
     },
     {
+      "path": "tests/test_download.py",
+      "bytes": 2258,
+      "sha256": "d19d2225a48b681c827f7304db56af5d16d3bc905481e4829480fa9155456b49"
+    },
+    {
       "path": "tests/test_model_artifact.py",
       "bytes": 2940,
       "sha256": "fcee1049edc95481f0378a912ba84f5448f04526856b55e76ad8886e4fe3e9a4"
     },
     {
       "path": "tests/test_public_contract.py",
-      "bytes": 2555,
-      "sha256": "4ef7206342a0978af7d5723888ee492ee13403381e47ed2e7527cb6a46d1d23d"
+      "bytes": 2777,
+      "sha256": "0d8eb3e95feb7cad1e9789a1b159c314f65c2c94ee6e996995a5d941f2ecf521"
     }
   ],
   "self_excluded": "PUBLIC_MANIFEST.json"

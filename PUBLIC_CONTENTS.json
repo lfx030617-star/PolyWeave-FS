@@ -1,7 +1,7 @@
 {
   "name": "PolyWeave-FS",
-  "release": "0.2.0-public-interface",
-  "scope": "selected examples, evaluation tools and inference-only interface; trained weights pending export",
+  "release": "0.3.0-public-model",
+  "scope": "selected examples, evaluation and inference interfaces, one final full-data DPO checkpoint",
   "structure_examples": 300,
   "primary_source_allocation": {
     "PI1M": 100,
@@ -27,11 +27,14 @@
   "complete_dataset_public": false,
   "training_code_public": false,
   "preference_cache_public": false,
-  "model_weights_public": false,
+  "model_weights_public": true,
   "raw_generation_records_public": false,
   "formal_test_conditions_public": false,
   "sampling": "First 100 distinct retained full-train targets per primary source in frozen file order, then first five available examples per condition type/source from those targets. Nonrandom illustrative selection, not a benchmark.",
   "inference_code_public": true,
   "model_checkpoint_publication_authorized": true,
-  "model_release_status": "awaiting_checkpoint_export_from_author_server"
+  "model_release_status": "published",
+  "released_model_training_seed": 101,
+  "released_model_arm": "DPO",
+  "other_model_checkpoints_public": false
 }
