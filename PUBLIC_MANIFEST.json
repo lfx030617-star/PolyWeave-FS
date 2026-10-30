@@ -48,13 +48,13 @@
     },
     {
       "path": "data/paper_endpoint_summaries_60.csv",
-      "bytes": 4160,
-      "sha256": "ec038f46d4a2f342464cd69227ddc42d5ca3e01dae38e5e3be8f500ef895d301"
+      "bytes": 4099,
+      "sha256": "7c3abe2767e31826377e1c8f37cc42f8eab8f177b72ff6c59fb280498e60b058"
     },
     {
       "path": "data/structures_300.csv",
-      "bytes": 47980,
-      "sha256": "e51c836fbcac610d0aad1f517e02f9b642bca4c5349429a42e6139283c0cbff3"
+      "bytes": 47679,
+      "sha256": "3f028fa4d48dc80a1c075844062681caf91b872cbe71760ff5b73a6033aaa61d"
     },
     {
       "path": "docs/DATA_SCHEMA.md",
