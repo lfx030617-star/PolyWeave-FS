@@ -14,14 +14,22 @@
       "compile_condition",
       "evaluate_candidate",
       "summarize_attempts"
+    ],
+    "sampling.py": [
+      "uniforms",
+      "categorical",
+      "sample_ids",
+      "decode"
     ]
   },
   "source_sha256": {
     "step2_data.py": "14ecb6fc47c8c2de50f283e1dd578c27564341b326eda740f412398270d02c6d",
-    "chemistry.py": "6ad7f10127b8b3c1abf4b855ef05acbdc945b9ec2eba4d7951c687417be79829"
+    "chemistry.py": "6ad7f10127b8b3c1abf4b855ef05acbdc945b9ec2eba4d7951c687417be79829",
+    "sampling.py": "3368bffd624a538f8b0c658cffea497c21f3dbc451f8f73f57f0fb313810a1d0"
   },
   "function_bodies_preserved": true,
   "imports_adapted_for_public_package": true,
   "private_source_paths_published": false,
-  "normalization_or_evaluation_rules_changed": false
+  "normalization_or_evaluation_rules_changed": false,
+  "inference_adaptation": "Prompt serialization and per-candidate frozen sampler retained; synchronization helper made local. No training code included."
 }

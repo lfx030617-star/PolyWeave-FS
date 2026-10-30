@@ -1,7 +1,7 @@
 {
   "name": "PolyWeave-FS",
-  "release": "0.1.0-public",
-  "scope": "selected examples and evaluation tools only",
+  "release": "0.2.0-public-interface",
+  "scope": "selected examples, evaluation tools and inference-only interface; trained weights pending export",
   "structure_examples": 300,
   "primary_source_allocation": {
     "PI1M": 100,
@@ -30,5 +30,8 @@
   "model_weights_public": false,
   "raw_generation_records_public": false,
   "formal_test_conditions_public": false,
-  "sampling": "First 100 distinct retained full-train targets per primary source in frozen file order, then first five available examples per condition type/source from those targets. Nonrandom illustrative selection, not a benchmark."
+  "sampling": "First 100 distinct retained full-train targets per primary source in frozen file order, then first five available examples per condition type/source from those targets. Nonrandom illustrative selection, not a benchmark.",
+  "inference_code_public": true,
+  "model_checkpoint_publication_authorized": true,
+  "model_release_status": "awaiting_checkpoint_export_from_author_server"
 }

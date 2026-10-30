@@ -1,0 +1,27 @@
+{
+  "status": "awaiting_checkpoint_export_from_author_server",
+  "checkpoint_download_available": false,
+  "release_asset_url": null,
+  "expected_identity": {
+    "arm": "DPO",
+    "scale": "full",
+    "training_seed": 101,
+    "model_fingerprint": "e5c968000b2bbbf3a55dce771877b9fb7c6a52c32f8ec7ef6e51b60d8bf90907",
+    "configuration_files": {
+      "config.json": "77d5ab1b400b8bbf560dcbbafc0cde429b11d65549887913d175fbf91e04bb78",
+      "generation_config.json": "cf8e6bfe1c9e61f0baa65c18c09d0f39a1d429fc4c9e0d8e9b9d657f282ae958"
+    },
+    "tokenizer_files": {
+      "added_tokens.json": "bb123d54a546861569a738b06eaeae75422a758e6ef0af91e4f6b50d647f282e",
+      "special_tokens_map.json": "c5784ed282cccffbc27ee1dbd73acae6575322a068d590a37fbc93abb0c44eeb",
+      "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+      "tokenizer.json": "c6d3666c1edcb23e3f08fe20a71718a637993951388ac166a882aeb0ebd8c7fe",
+      "tokenizer_config.json": "e11dbef82d4929f7fd3a0d597273e3fa7a2acc47f7b9f36f75be329ede318fc5"
+    },
+    "artifact_name": "PolyWeave-FS-DPO-full-seed101",
+    "vocab_size": 32115
+  },
+  "training_data_public": false,
+  "original_raw_generation_records_public": false,
+  "seed_selection": "fixed first training seed 101, not performance-selected"
+}

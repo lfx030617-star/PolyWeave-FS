@@ -1,5 +1,5 @@
 {
-  "scope": "Allowlisted partial public export only",
+  "scope": "Allowlisted partial public export and inference interface only; actual model checkpoint pending export",
   "files": [
     {
       "path": ".gitattributes",
@@ -8,13 +8,13 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 372,
-      "sha256": "59fdda0cbcbce17711aba35c044b93b5670e9a7dbc6fff8ada02b6d35fe2699f"
+      "bytes": 422,
+      "sha256": "8796916d0f8e4bfafe9ef32e222f0bba1b8238bb78426ecb4d82db2e3eaaf85d"
     },
     {
       "path": "CODE_PROVENANCE.json",
-      "bytes": 736,
-      "sha256": "6e633b1af4fb803f1721a79f5d9a0aa35e1d4fa68253a8557ef099a269fefe8f"
+      "bytes": 1080,
+      "sha256": "bffc18389ee9d3dccc3eceefd4a647703194d68cf07fe217a488e89ff89f2946"
     },
     {
       "path": "LICENSE",
@@ -22,19 +22,24 @@
       "sha256": "55df5459a63497d055858a142d4bc717894e840223849562b4f3980d9cfae018"
     },
     {
+      "path": "MODEL_RELEASE.json",
+      "bytes": 1296,
+      "sha256": "e40858f0156ea69a85fdd4799f08c73cca9c07d7a6f1f6bbf6310a750a81b752"
+    },
+    {
       "path": "PUBLIC_CONTENTS.json",
-      "bytes": 964,
-      "sha256": "79ce910021baf8d17f62bd6a2190ff1b6fd23c958251506e23fd02d8d85313ad"
+      "bytes": 1186,
+      "sha256": "65b39d52ea4e9c11a26c2041edba874fb446e3cd50616e5e8bdbf51ee76cd6f4"
     },
     {
       "path": "README.md",
-      "bytes": 2985,
-      "sha256": "c3972e4ed3faaa8bf05a1d8b7c7ba6850ba5fecdfecb13c741195c2ea8d97af1"
+      "bytes": 3598,
+      "sha256": "ed5d5c17651ba964db85536f318daf050203316a6b4428af0e96a82bdadee936"
     },
     {
       "path": "README_中文.md",
-      "bytes": 1781,
-      "sha256": "9fb429ce73e0fafd05e3bd5ba463ee7e69c1eaac7583141d35013b63dbde13b1"
+      "bytes": 2202,
+      "sha256": "bd373270f85a01fe5a49ec43ee5c1f60fcf29e32bcf28c760f8a62dbbc9bd9eb"
     },
     {
       "path": "data/TERMS.md",
@@ -62,9 +67,14 @@
       "sha256": "8164835dbad1837028a63cebafbe792defcb765d4fbf54a925d478ce5051307a"
     },
     {
+      "path": "docs/MODEL_USAGE.md",
+      "bytes": 2547,
+      "sha256": "726d51bff6d9b9022b58f1b4315775ad522a69a1ef84601f3d06929ef0c58faa"
+    },
+    {
       "path": "docs/VALIDATION.md",
-      "bytes": 583,
-      "sha256": "e93017aaa76d400e074cc3396f387125a6e405f8a1ca6740a401da3f8960df9a"
+      "bytes": 1208,
+      "sha256": "05c3bbdfe15737ccf24775650f8476dda03698f770100431c6b4d476721cf818"
     },
     {
       "path": "licenses/OMG-GPL-3.0.txt",
@@ -107,6 +117,16 @@
       "sha256": "ed33c60ed0286a8ade15bc89f6741b59e763860778901523074387945401615e"
     },
     {
+      "path": "polyweave_public/inference.py",
+      "bytes": 6153,
+      "sha256": "d939616d67d2abf8e1f08221b4f0b8f954a97b4a57f0fa87b77e4af70523547c"
+    },
+    {
+      "path": "polyweave_public/model_artifact.py",
+      "bytes": 3093,
+      "sha256": "f47a00310f7a0b512b7cc17e94548aa8ee89696def2e62c23680808514638c9d"
+    },
+    {
       "path": "polyweave_public/results.py",
       "bytes": 842,
       "sha256": "c307dfb1ec894a0600dcd188bc09584ed32bebed03abe0ead9fff2c2fd070f2f"
@@ -117,14 +137,29 @@
       "sha256": "b56dd5a00e11876c29ebda5420b7a0f6261fd44c92455be51976e09b62266a5c"
     },
     {
+      "path": "polyweave_public/sampling.py",
+      "bytes": 3970,
+      "sha256": "a69c337d66a53c582c936948885a231023c5762da9231583454909374d2e8e5d"
+    },
+    {
       "path": "requirements-evaluation.txt",
       "bytes": 16,
       "sha256": "d72ec093a3f6f4a30b75e16b5705d4dba3015f0197e33087524ebd5840ad22a3"
     },
     {
+      "path": "requirements-inference.txt",
+      "bytes": 182,
+      "sha256": "01593a102a2a51c51475a1cdbc2c5a4ac004e88b11b3aaf032190ff526199368"
+    },
+    {
       "path": "scripts/check_examples.py",
       "bytes": 1250,
       "sha256": "2e18b13795b15d642ed7fe17a21c555b0155088f7a9dc2e92644ef27353e31f1"
+    },
+    {
+      "path": "scripts/generate.py",
+      "bytes": 171,
+      "sha256": "fd738b9cc592b2295d5a7150e983fc43fa1cb03d2c88e61fddbf19c517f2f81b"
     },
     {
       "path": "scripts/preview_data.py",
@@ -135,6 +170,11 @@
       "path": "scripts/summarize_results.py",
       "bytes": 406,
       "sha256": "fc56d15cec497c77ada788154623fae93df4214d874a4bcc59aa1f88115579dc"
+    },
+    {
+      "path": "tests/test_model_artifact.py",
+      "bytes": 2940,
+      "sha256": "fcee1049edc95481f0378a912ba84f5448f04526856b55e76ad8886e4fe3e9a4"
     },
     {
       "path": "tests/test_public_contract.py",

@@ -5,6 +5,8 @@
 !/README.md
 !/README_中文.md
 !/LICENSE
+!/MODEL_RELEASE.json
+!/requirements-inference.txt
 !/PUBLIC_CONTENTS.json
 !/CODE_PROVENANCE.json
 !/PUBLIC_MANIFEST.json
